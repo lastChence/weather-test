@@ -1,0 +1,16 @@
+<div class="container-fluid">
+  <div class="jumbotron text-center">
+    <input class="form-control custom" [(ngModel)]="query" type="text" placeholder="Enter your sity">
+    <button class="btn btn-primary" (click)="getWeather(query)">
+      Submit
+    </button>
+  </div>
+  <div *ngFor="let sityWeather of sityWeatherList; index as i;" class="jumbotron text-center">
+    <q>
+      <img [src]="getImageSrc(sityWeather)" [alt]="sityWeather.weather[0].main">
+      {{sityWeather.name}}
+      <span (click)="removeSity(i)">X</span>
+    </q>
+  </div>
+</div>
+  
