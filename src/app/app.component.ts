@@ -7,12 +7,6 @@ import { WeatherService } from './weather.service';
   styleUrls: ['./app.component.css']
 })
 
-// export interface SityWeather {
-//   weather: object[];
-//   name: string;
-//   main: object;
-// }
-
 export class AppComponent implements OnInit {
 
   sityWeatherList: object[];
